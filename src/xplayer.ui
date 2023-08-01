@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>xplayerClass</class>
+ <widget class="QMainWindow" name="xplayerClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>733</width>
+    <height>572</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>xplayer</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="XVideoWidget" name="widget" native="true"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pb_play">
+        <property name="text">
+         <string>bf</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSlider" name="video_slider">
+        <property name="maximum">
+         <number>999</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="act_openfile"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="act_openfile">
+   <property name="text">
+    <string>openfile</string>
+   </property>
+   <property name="toolTip">
+    <string>打开音视频文件</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>XVideoWidget</class>
+   <extends>QWidget</extends>
+   <header>xvideowidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="xplayer.qrc"/>
+ </resources>
+ <connections/>
+</ui>
